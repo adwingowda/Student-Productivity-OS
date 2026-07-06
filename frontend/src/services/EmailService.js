@@ -1,0 +1,12 @@
+import axios from "axios";
+
+const API_URL = "http://localhost:8080/api/emails";
+
+export async function getEmails() {
+
+    const response = await axios.get(API_URL, {
+        withCredentials: true,
+    });
+
+    return response.data;
+}
