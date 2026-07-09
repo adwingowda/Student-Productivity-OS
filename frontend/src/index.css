@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #08111F;
+  font-family: Inter, sans-serif;
+}
+
+/* Modern Dashboard Scrollbar */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A3A55;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D5378;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A3A55 transparent;
+}
