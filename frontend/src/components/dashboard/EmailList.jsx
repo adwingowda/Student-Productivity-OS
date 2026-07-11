@@ -1,6 +1,11 @@
 import EmailCard from "./EmailCard";
 
-function EmailList({ emails }) {
+
+function EmailList({
+  emails,
+  selectedEmail,
+  setSelectedEmail,
+}) {
   return (
     <div className="h-full overflow-y-auto">
 
@@ -17,12 +22,18 @@ function EmailList({ emails }) {
       </div>
 
       <div>
+        
         {emails.map((email) => (
+
           <EmailCard
             key={email.id}
             email={email}
+            selected={selectedEmail?.id === email.id}
+            onClick={() => setSelectedEmail(email)}
           />
+
         ))}
+
       </div>
 
     </div>
